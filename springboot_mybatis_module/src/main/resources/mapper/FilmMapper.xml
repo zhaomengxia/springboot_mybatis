@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springboot_mybatis_module.springboot_mybatis_module.dao.FilmMapper" >
+  <resultMap id="BaseResultMap" type="com.springboot_mybatis_module.springboot_mybatis_module.model.Film" >
+    <constructor >
+      <arg column="film_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="description" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="last_update" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="length" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="rating" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="release_year" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="rental_duration" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="rental_rate" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="replacement_cost" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="special_features" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="language_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="original_language_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    </constructor>
+  </resultMap>
+  <insert id="insert" parameterType="com.springboot_mybatis_module.springboot_mybatis_module.model.Film" >
+    insert into film (film_id, description, last_update, 
+      length, rating, release_year, 
+      rental_duration, rental_rate, replacement_cost, 
+      special_features, title, language_id, 
+      original_language_id)
+    values (#{filmId,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}, #{lastUpdate,jdbcType=TIMESTAMP}, 
+      #{length,jdbcType=INTEGER}, #{rating,jdbcType=VARCHAR}, #{releaseYear,jdbcType=INTEGER}, 
+      #{rentalDuration,jdbcType=INTEGER}, #{rentalRate,jdbcType=REAL}, #{replacementCost,jdbcType=REAL}, 
+      #{specialFeatures,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{languageId,jdbcType=INTEGER}, 
+      #{originalLanguageId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springboot_mybatis_module.springboot_mybatis_module.model.Film" >
+    insert into film
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="filmId != null" >
+        film_id,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="lastUpdate != null" >
+        last_update,
+      </if>
+      <if test="length != null" >
+        length,
+      </if>
+      <if test="rating != null" >
+        rating,
+      </if>
+      <if test="releaseYear != null" >
+        release_year,
+      </if>
+      <if test="rentalDuration != null" >
+        rental_duration,
+      </if>
+      <if test="rentalRate != null" >
+        rental_rate,
+      </if>
+      <if test="replacementCost != null" >
+        replacement_cost,
+      </if>
+      <if test="specialFeatures != null" >
+        special_features,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="languageId != null" >
+        language_id,
+      </if>
+      <if test="originalLanguageId != null" >
+        original_language_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="filmId != null" >
+        #{filmId,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdate != null" >
+        #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="length != null" >
+        #{length,jdbcType=INTEGER},
+      </if>
+      <if test="rating != null" >
+        #{rating,jdbcType=VARCHAR},
+      </if>
+      <if test="releaseYear != null" >
+        #{releaseYear,jdbcType=INTEGER},
+      </if>
+      <if test="rentalDuration != null" >
+        #{rentalDuration,jdbcType=INTEGER},
+      </if>
+      <if test="rentalRate != null" >
+        #{rentalRate,jdbcType=REAL},
+      </if>
+      <if test="replacementCost != null" >
+        #{replacementCost,jdbcType=REAL},
+      </if>
+      <if test="specialFeatures != null" >
+        #{specialFeatures,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="languageId != null" >
+        #{languageId,jdbcType=INTEGER},
+      </if>
+      <if test="originalLanguageId != null" >
+        #{originalLanguageId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>
