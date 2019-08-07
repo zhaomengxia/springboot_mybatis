@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/springboot_mybatis_module/pom.xml" />
         <option value="$PROJECT_DIR$/springdatajpa/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurity/pom.xml" />
       </list>
     </option>
   </component>

@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_mybatis_module" />
         <module name="springdatajpa" />
+        <module name="springsecurity" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springboot_mybatis_module" target="1.8" />
       <module name="springdatajpa" target="1.8" />
+      <module name="springsecurity" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
