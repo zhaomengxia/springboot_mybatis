@@ -1,0 +1,20 @@
+
+#ø™∑¢≈‰÷√
+spring:
+   datasource:
+     driver-class-name: com.mysql.cj.jdbc.Driver
+     url: jdbc:mysql://127.0.0.1:3306/zmx?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+     username: root
+     password: root
+   jpa:
+     show-sql: true
+     database: mysql
+     properties:
+       hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+     hibernate:
+       ddl-auto: update
+server:
+  port: 8080
+  servlet:
+    context-path: /mysecurity
