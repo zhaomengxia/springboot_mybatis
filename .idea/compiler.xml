@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="commons" />
         <module name="customer" />
+        <module name="feign" />
         <module name="mongodb" />
         <module name="producer" />
         <module name="springboot_mybatis_module" />
@@ -19,6 +20,7 @@
     <bytecodeTargetLevel>
       <module name="commons" target="1.8" />
       <module name="customer" target="1.8" />
+      <module name="feign" target="1.8" />
       <module name="hystrix" target="1.8" />
       <module name="mongodb" target="1.8" />
       <module name="producer" target="1.8" />
