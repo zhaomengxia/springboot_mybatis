@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot_mybatis_module.springboot_mybatis_module.dao.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.springboot_mybatis_module.springboot_mybatis_module.model.Student">
+      <id column="sid" property="sid" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+      <result column="sname" property="sname" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <result column="sage" property="sage" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <result column="ssex" property="ssex" javaType="java.lang.String" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.springboot_mybatis_module.springboot_mybatis_module.model.Student">
+    insert into student (sname,sage, ssex)
+    values ( #{sname,jdbcType=VARCHAR},
+      #{sage,jdbcType=INTEGER}, #{ssex,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springboot_mybatis_module.springboot_mybatis_module.model.Student">
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <!--<if test="sId != null">-->
+        <!--s_id,-->
+      <!--</if>-->
+
+      <if test="sname != null">
+        sname,
+      </if>
+      <if test="sage != null">
+        sage,
+      </if>
+      <if test="ssex != null">
+        ssex,
+      </if>
+
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <!--<if test="sId != null">-->
+        <!--#{sId,jdbcType=INTEGER},-->
+      <!--</if>-->
+
+      <if test="sname != null">
+        #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="sage != null">
+        #{sage,jdbcType=INTEGER},
+      </if>
+      <if test="ssex != null">
+        #{ssex,jdbcType=VARCHAR},
+      </if>
+
+    </trim>
+  </insert>
+  <insert id="insertBatch" parameterType="java.util.List">
+    INSERT INTO student(sname,sage,ssex)
+    VALUES
+    <foreach collection="list" item="item" separator=",">
+      (#{item.sname,jdbcType=VARCHAR},#{item.sage,jdbcType=INTEGER},#{item.ssex,jdbcType=VARCHAR})
+    </foreach>
+
+  </insert>
+</mapper>
