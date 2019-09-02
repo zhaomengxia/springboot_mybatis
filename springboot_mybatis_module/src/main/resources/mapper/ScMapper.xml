@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springboot_mybatis_module.springboot_mybatis_module.dao.ScMapper" >
+  <resultMap id="BaseResultMap" type="com.springboot_mybatis_module.springboot_mybatis_module.model.Sc" >
+    <constructor >
+      <arg column="sid" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cid" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="score" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    </constructor>
+  </resultMap>
+
+  <resultMap id="studentDTO" type="com.springboot_mybatis_module.springboot_mybatis_module.dto.StudentDTO">
+    <result column="sname" property="sname"/>
+    <result column="sage" property="sage"/>
+    <result column="score" property="score"/>
+    <result column="ssex" property="ssex"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    s.sname,s.sage,sc.score,s.ssex
+  </sql>
+  <insert id="insert" parameterType="com.springboot_mybatis_module.springboot_mybatis_module.model.Sc" >
+    insert into sc (sid, cid, score
+      )
+    values (#{sid,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, #{score,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.springboot_mybatis_module.springboot_mybatis_module.model.Sc" >
+    insert into sc
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="sid != null" >
+        sid,
+      </if>
+      <if test="cid != null" >
+        cid,
+      </if>
+      <if test="score != null" >
+        score,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="sid != null" >
+        #{sid,jdbcType=INTEGER},
+      </if>
+      <if test="cid != null" >
+        #{cid,jdbcType=INTEGER},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <insert id="insertBatch" parameterType="java.util.List">
+
+    INSERT INTO sc(sid,cid,score)
+    VALUES
+    <foreach collection="scs" item="item" separator=",">
+      ( #{item.sid,jdbcType=INTEGER}, #{item.cid,jdbcType=INTEGER}, #{item.score,jdbcType=INTEGER})
+    </foreach>
+
+  </insert>
+  <select id="findAllByScore" resultMap="studentDTO">
+
+     SELECT
+		<include refid="Base_Column_List"/>
+	FROM
+		student s
+	INNER JOIN sc sc
+	WHERE
+		sc.cid = 1
+	AND sc.score =  #{score}
+	AND sc.sid = s.sid
+
+  </select>
+</mapper>

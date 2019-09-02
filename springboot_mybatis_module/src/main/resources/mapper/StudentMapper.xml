@@ -47,10 +47,10 @@
 
     </trim>
   </insert>
-  <insert id="insertBatch" parameterType="java.util.List">
+  <insert id="insertBatch" parameterType="java.util.List" >
     INSERT INTO student(sname,sage,ssex)
     VALUES
-    <foreach collection="list" item="item" separator=",">
+    <foreach collection="students" item="item" separator=",">
       (#{item.sname,jdbcType=VARCHAR},#{item.sage,jdbcType=INTEGER},#{item.ssex,jdbcType=VARCHAR})
     </foreach>
 

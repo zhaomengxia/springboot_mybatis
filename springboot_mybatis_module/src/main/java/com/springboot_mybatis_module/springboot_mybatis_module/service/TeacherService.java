@@ -5,6 +5,8 @@ import com.springboot_mybatis_module.springboot_mybatis_module.model.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 /**
  * @Author zhaomengxia
@@ -18,5 +20,9 @@ public class TeacherService {
 
     public int saveOrUpdateTeacher(Teacher teacher){
         return teacherMapper.insert(teacher);
+    }
+
+    public int saveOrupdateAll(List<Teacher> teachers){
+        return teacherMapper.insertBatch(teachers);
     }
 }
