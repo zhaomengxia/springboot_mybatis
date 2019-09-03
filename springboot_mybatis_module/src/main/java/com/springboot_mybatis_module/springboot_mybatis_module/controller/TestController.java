@@ -1,5 +1,7 @@
 package com.springboot_mybatis_module.springboot_mybatis_module.controller;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageInfo;
 import com.springboot_mybatis_module.springboot_mybatis_module.dto.StudentDTO;
 import com.springboot_mybatis_module.springboot_mybatis_module.model.Sc;
 import com.springboot_mybatis_module.springboot_mybatis_module.model.Student;
@@ -117,6 +119,12 @@ public class TestController {
 
         return scService.findAll(score);
 
+    }
+
+    @GetMapping(value = "/findAllByPage")
+    @ApiOperation(value = "分页查询,引入分页插件")
+    public PageInfo<Student> findAllByPage(){
+        return studentService.select();
     }
 
 }
