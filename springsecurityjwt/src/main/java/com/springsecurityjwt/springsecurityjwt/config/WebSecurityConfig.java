@@ -1,6 +1,7 @@
 package com.springsecurityjwt.springsecurityjwt.config;
 
 import com.springsecurityjwt.springsecurityjwt.filter.JWTLoginFilter;
+import com.springsecurityjwt.springsecurityjwt.filter.JwtAuthenticationFilter;
 import com.springsecurityjwt.springsecurityjwt.filter.JwtAuthenticationTwoFilter;
 import com.springsecurityjwt.springsecurityjwt.handler.Http401AuthenticationEntryPoint;
 import com.springsecurityjwt.springsecurityjwt.service.impl.CustomAuthenticationProvider;
@@ -69,14 +70,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
                 .exceptionHandling()
                    .authenticationEntryPoint(new Http401AuthenticationEntryPoint("Basic realm=\"MyApp\""))
                 .and()
-//                .addFilter(new JWTLoginFilter(authenticationManager()))
-//                .addFilter(new JwtAuthenticationTwoFilter(authenticationManager()))
+                .addFilter(new JWTLoginFilter(authenticationManager()))
+                .addFilter(new JwtAuthenticationFilter(authenticationManager()))
                 .logout()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/login")
                 .permitAll();
 
-        http.addFilterBefore(jwtAuthenticationTwoFilter(),UsernamePasswordAuthenticationFilter.class);
+//        http.addFilterBefore(jwtAuthenticationTwoFilter(),UsernamePasswordAuthenticationFilter.class);
     }
 
 
