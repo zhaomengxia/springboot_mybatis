@@ -16,7 +16,8 @@ public class SaleTicketRunnableTest {
         Thread thread2=new Thread(saleTicketRunnable,"窗口3");
 
         Thread thread3=new Thread(saleTicketRunnable,"窗口4");
-
+        //设置该线程可以拥有最大优先级
+        thread.setPriority(Thread.MAX_PRIORITY);
         thread.start();
         thread1.start();
         thread2.start();
