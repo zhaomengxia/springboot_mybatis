@@ -14,8 +14,12 @@
         <option value="$PROJECT_DIR$/feign/pom.xml" />
         <option value="$PROJECT_DIR$/zuul/pom.xml" />
         <option value="$PROJECT_DIR$/springsecurityjwt/pom.xml" />
+        <option value="$PROJECT_DIR$/ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer2/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_9" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://E:/appletPackage/out" />
+  </component>
 </project>

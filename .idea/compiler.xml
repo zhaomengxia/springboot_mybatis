@@ -2,15 +2,18 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="commons" />
+        <module name="consumer2" />
         <module name="customer" />
         <module name="feign" />
         <module name="mongodb" />
         <module name="producer" />
+        <module name="ribbon" />
         <module name="springboot_mybatis_module" />
         <module name="springcloud" />
         <module name="springdatajpa" />
@@ -21,11 +24,13 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="commons" target="1.8" />
+      <module name="consumer2" target="1.8" />
       <module name="customer" target="1.8" />
       <module name="feign" target="1.8" />
       <module name="hystrix" target="1.8" />
       <module name="mongodb" target="1.8" />
       <module name="producer" target="1.8" />
+      <module name="ribbon" target="1.8" />
       <module name="springboot_mybatis_module" target="1.8" />
       <module name="springcloud" target="1.8" />
       <module name="springdatajpa" target="1.8" />

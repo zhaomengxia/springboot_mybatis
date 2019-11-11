@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        //js弱类型语言，声明变量的时候，用var关键字
+        //1.number类型
+        var num=100;
+        //2.定义字符串。js中""和‘’都表示字符串
+        var num1="123456";
+        //定义字符串
+        var num2='2334545';
+        //3.boolean类型
+        var num3=true;
+
+        //函数typeof,可以查看当前变量的类型
+        alert(typeof (num));
+
+        alert(typeof (num1));
+
+        alert(typeof (num2));
+
+        alert(typeof (num3));
+        //4.引用类型，为objext。date为js提供的日期对象
+        var num5=new Date();
+
+        alert(num5);
+
+        alert(typeof (num5));
+        //5.undefined。js中没有值的变量，其值是undefined。其值也返回undefined
+        var num6;
+        alert(typeof (num6));
+
+        //定义为number类型的变量
+        var num7=1000;
+
+        alert(typeof (num7));
+        //还可以赋字符串
+        num7="哈哈哈";
+        alert(typeof (num7));
+        //js中数组属于对象
+        var chars=[1,2,3,45,6];
+        //弹出结果是 object
+        alert(typeof (chars));
+
+        var name="It's alright";
+
+        var name1="He is called 'bill'";
+
+        var name2='He is called "Bill"';
+
+        alert(name+"---"+name1+"----"+name2);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

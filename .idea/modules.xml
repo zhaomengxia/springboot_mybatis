@@ -3,16 +3,19 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumer2/consumer2.iml" filepath="$PROJECT_DIR$/consumer2/consumer2.iml" />
       <module fileurl="file://$PROJECT_DIR$/customer/customer.iml" filepath="$PROJECT_DIR$/customer/customer.iml" />
       <module fileurl="file://$PROJECT_DIR$/feign/feign.iml" filepath="$PROJECT_DIR$/feign/feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/mongodb/mongodb.iml" filepath="$PROJECT_DIR$/mongodb/mongodb.iml" />
       <module fileurl="file://$PROJECT_DIR$/producer/producer.iml" filepath="$PROJECT_DIR$/producer/producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ribbon/ribbon.iml" filepath="$PROJECT_DIR$/ribbon/ribbon.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springboot_mybatis.iml" filepath="$PROJECT_DIR$/.idea/springboot_mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_mybatis_module/springboot_mybatis_module.iml" filepath="$PROJECT_DIR$/springboot_mybatis_module/springboot_mybatis_module.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud/springcloud.iml" filepath="$PROJECT_DIR$/springcloud/springcloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/springdatajpa/springdatajpa.iml" filepath="$PROJECT_DIR$/springdatajpa/springdatajpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/springsecurity/springsecurity.iml" filepath="$PROJECT_DIR$/springsecurity/springsecurity.iml" />
       <module fileurl="file://$PROJECT_DIR$/springsecurityjwt/springsecurityjwt.iml" filepath="$PROJECT_DIR$/springsecurityjwt/springsecurityjwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testweb/testweb.iml" filepath="$PROJECT_DIR$/testweb/testweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
     </modules>
   </component>

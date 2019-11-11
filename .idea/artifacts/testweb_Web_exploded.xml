@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="testweb:Web exploded">
+    <output-path>E:/appletPackage/out/artifacts/testweb_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="testweb/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="testweb" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
