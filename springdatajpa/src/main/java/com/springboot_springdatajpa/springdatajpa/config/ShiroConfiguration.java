@@ -34,7 +34,6 @@ public class ShiroConfiguration {
     public LifecycleBeanPostProcessor lifecycleBeanPostProcessor(){
         return new LifecycleBeanPostProcessor();
     }
-
     /**
      * HashedCredentialsMatcher这个是为了对密码进行编码的，防止密码在数据库里明码保存，当然在登陆认证的时候，
      * 这个类也负责对form里输入的密码进行编码。
